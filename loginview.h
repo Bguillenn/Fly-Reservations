@@ -15,6 +15,11 @@ public:
     LoginView(QWidget *parent = nullptr);
     ~LoginView();
 
+private slots:
+    void on_btnSalir_clicked();
+
+    void on_btnEntrar_clicked();
+
 private:
     Ui::LoginView *ui;
 };
