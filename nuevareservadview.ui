@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NuevaReservaDView</class>
+ <widget class="QWidget" name="NuevaReservaDView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #f8f8f8;</string>
+  </property>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>231</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 800 12pt &quot;Roboto&quot;;</string>
+   </property>
+   <property name="text">
+    <string>CONFIRMACIÓN DE RESERVA</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnConfirmar">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>400</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
+   <property name="text">
+    <string>CONFIRMAR</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>750</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(153, 0, 206);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 30pt &quot;Roboto&quot;;
+color: #FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string>NUEVA RESERVA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCancelar">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>10</y>
+      <width>120</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: #4A0064;
+border: none;
+color: #FFFFFF;
+font: 800 10pt &quot;Roboto&quot;;
+}
+
+QPushButton:hover{
+background-color: #F94E4E;
+}
+
+QPushButton:pressed{
+background-color: #EE2525;
+}</string>
+    </property>
+    <property name="text">
+     <string>CANCELAR</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 800 12pt &quot;Roboto&quot;;</string>
+   </property>
+   <property name="text">
+    <string>PASO 2/2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAnterior">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>400</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #484848;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #333232
+}
+
+QPushButton:pressed{
+	background-color: #484848;
+}</string>
+   </property>
+   <property name="text">
+    <string>ANTERIOR</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>711</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #FFFFFF;
+border: 2px solid #f0f0f0;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Codigo de la reserva:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Origen:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Destino:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Capacidad:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Asientos reservados:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Fecha y hora de salida:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Precio por asiento:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>30</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Total a pagar:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblPrecioTotal">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>50</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 30pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>S/ 600.00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblCodigoReserva">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>RSV-1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblOrigen">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Arequipa - Perú</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDestino">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>50</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Lima - Perú</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblCapacidad">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>70</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>40 asientos</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAsientosReservados">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>90</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>4 asientos</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblFechaPartida">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>110</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>20/07/2020 15:30</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblPrecioAsiento">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>130</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;Roboto&quot;;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>S/ 150.00</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;Roboto&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Detalles de la reserva</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>310</y>
+     <width>271</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;Roboto&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Para completar la reserva ingresa el DNI del cliente:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtDniCliente">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>330</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid #000000;
+font: 800 14pt &quot;Roboto&quot;;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

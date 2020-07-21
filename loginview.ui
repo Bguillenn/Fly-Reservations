@@ -144,6 +144,9 @@ font: 10pt &quot;Roboto&quot;;</string>
     <property name="maxLength">
      <number>32767</number>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
     <property name="placeholderText">
      <string>Ingresa tu constraseña</string>
     </property>

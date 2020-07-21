@@ -2,6 +2,7 @@
 #include "ui_loginview.h"
 #include <QPixmap>
 #include <QMessageBox>
+#include <mainview.h>
 
 LoginView::LoginView(QWidget *parent)
     : QMainWindow(parent)
@@ -30,4 +31,9 @@ void LoginView::on_btnEntrar_clicked()
         QMessageBox::about(this,"Faltan datos", "Debes completar todos los campos");
         return;
     }
+
+    MainView *mainView = new MainView();
+    mainView->show();
+
+    close();
 }

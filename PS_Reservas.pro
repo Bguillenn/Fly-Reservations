@@ -17,13 +17,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    loginview.cpp
+    loginview.cpp \
+    mainview.cpp \
+    nuevareservadview.cpp \
+    nuevareservauview.cpp
 
 HEADERS += \
-    loginview.h
+    loginview.h \
+    mainview.h \
+    nuevareservadview.h \
+    nuevareservauview.h
 
 FORMS += \
-    loginview.ui
+    loginview.ui \
+    mainview.ui \
+    nuevareservadview.ui \
+    nuevareservauview.ui
 
 TRANSLATIONS += \
     PS_Reservas_es_PE.ts
