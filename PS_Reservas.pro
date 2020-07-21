@@ -16,6 +16,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    buscarreservaview.cpp \
+    listarreservasview.cpp \
     main.cpp \
     loginview.cpp \
     mainview.cpp \
@@ -23,12 +25,16 @@ SOURCES += \
     nuevareservauview.cpp
 
 HEADERS += \
+    buscarreservaview.h \
+    listarreservasview.h \
     loginview.h \
     mainview.h \
     nuevareservadview.h \
     nuevareservauview.h
 
 FORMS += \
+    buscarreservaview.ui \
+    listarreservasview.ui \
     loginview.ui \
     mainview.ui \
     nuevareservadview.ui \

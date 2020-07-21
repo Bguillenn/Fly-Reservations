@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BuscarReservaView</class>
+ <widget class="QWidget" name="BuscarReservaView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #F8F8F8;
+font: 8pt &quot;Roboto&quot;;</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>750</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(153, 0, 206);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 30pt &quot;Roboto&quot;;
+color: #FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string>BUSCAR RESERVA</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btnSalir">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>390</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #484848;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #333232
+}
+
+QPushButton:pressed{
+	background-color: #484848;
+}</string>
+   </property>
+   <property name="text">
+    <string>SALIR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnMostrarInfo">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>390</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
+   <property name="text">
+    <string>MOSTRAR INFO</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tblResultados">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>710</width>
+     <height>251</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>191</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 800 12pt &quot;Roboto&quot;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnBuscarDni">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>80</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
+   <property name="text">
+    <string>Buscar por DNI</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnBuscarCodigo">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>80</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
+   <property name="text">
+    <string>Buscar por Codigo</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

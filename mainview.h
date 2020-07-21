@@ -20,6 +20,12 @@ private slots:
 
     void on_btnNuevaReserva_clicked();
 
+    void on_btnListarReservas_clicked();
+
+    void changeDateTime();
+
+    void on_btnBuscarReserva_clicked();
+
 private:
     Ui::MainView *ui;
 };

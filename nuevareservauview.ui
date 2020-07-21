@@ -132,18 +132,18 @@ background-color: #EE2525;
     <rect>
      <x>410</x>
      <y>100</y>
-     <width>111</width>
+     <width>51</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Cantidad de pasajeros</string>
+    <string>Pasajeros</string>
    </property>
   </widget>
   <widget class="QSpinBox" name="txtPasajeros">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>410</x>
      <y>120</y>
      <width>61</width>
      <height>22</height>
@@ -153,24 +153,31 @@ background-color: #EE2525;
   <widget class="QPushButton" name="btnBuscar">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>650</x>
      <y>120</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 8pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
    <property name="text">
     <string>Buscar</string>
-   </property>
-  </widget>
-  <widget class="QTableView" name="tblVuelos">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>150</y>
-     <width>711</width>
-     <height>231</height>
-    </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -233,6 +240,42 @@ QPushButton:pressed{
    </property>
    <property name="text">
     <string>PASO 1/2</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="txtFecha">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>120</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>100</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A partir de</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tblVuelos">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>710</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;</string>
    </property>
   </widget>
  </widget>

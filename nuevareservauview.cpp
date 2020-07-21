@@ -11,6 +11,16 @@ NuevaReservaUView::NuevaReservaUView(QWidget *parent) :
     ui(new Ui::NuevaReservaUView)
 {
     ui->setupUi(this);
+    /*Configurando el JTable*/
+    QStringList headers;
+    ui->tblVuelos->setColumnCount(5);
+    headers <<"Codigo"<<"Origen"<<"Destino"<<"Fecha y hora de partida"<<"Asientos disponibles";
+    ui->tblVuelos->setHorizontalHeaderLabels(headers);
+    ui->tblVuelos->setColumnWidth(0,70);
+    ui->tblVuelos->setColumnWidth(1,170);
+    ui->tblVuelos->setColumnWidth(2,170);
+    ui->tblVuelos->setColumnWidth(3,170);
+    ui->tblVuelos->setColumnWidth(4,120);
 }
 
 NuevaReservaUView::~NuevaReservaUView()

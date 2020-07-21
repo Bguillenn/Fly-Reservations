@@ -1,16 +1,23 @@
 #include "mainview.h"
 #include "ui_mainview.h"
 #include <QMessageBox>
+#include <QTimer>
+#include <QDateTime>
 
 /* Importación de las vistas*/
 #include <loginview.h>
 #include "nuevareservauview.h"
+#include "listarreservasview.h"
+#include "buscarreservaview.h"
 
 MainView::MainView(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MainView)
 {
     ui->setupUi(this);
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(changeDateTime()));
+    timer->start();
 }
 
 MainView::~MainView()
@@ -35,6 +42,31 @@ void MainView::on_btnNuevaReserva_clicked()
 {
     NuevaReservaUView *nuevaReservaView = new NuevaReservaUView();
     nuevaReservaView->show();
+
+    close();
+}
+
+void MainView::on_btnListarReservas_clicked()
+{
+    ListarReservasView *listarReservas = new ListarReservasView();
+    listarReservas->show();
+
+    close();
+}
+
+void MainView::changeDateTime(){
+    QDateTime dateTime;
+    dateTime = QDateTime::currentDateTime();
+    QTime hora = dateTime.time();
+    ui->lblTime->setText(hora.toString());
+    QString fecha = dateTime.date().toString("dd/MM/yyyy");
+    ui->lblDate->setText(fecha);
+}
+
+void MainView::on_btnBuscarReserva_clicked()
+{
+    BuscarReservaView *buscarReserva = new BuscarReservaView();
+    buscarReserva->show();
 
     close();
 }
