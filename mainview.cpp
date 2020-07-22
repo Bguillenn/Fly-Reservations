@@ -9,6 +9,9 @@
 #include "nuevareservauview.h"
 #include "listarreservasview.h"
 #include "buscarreservaview.h"
+#include "cancelarreservaview.h"
+#include "maestroempleadosview.h"
+#include "maestrovuelosview.h"
 
 MainView::MainView(QWidget *parent) :
     QWidget(parent),
@@ -67,6 +70,30 @@ void MainView::on_btnBuscarReserva_clicked()
 {
     BuscarReservaView *buscarReserva = new BuscarReservaView();
     buscarReserva->show();
+
+    close();
+}
+
+void MainView::on_btnEmpleados_clicked()
+{
+    MaestroEmpleadosView *maestroEmpleados = new MaestroEmpleadosView();
+    maestroEmpleados->show();
+
+    close();
+}
+
+void MainView::on_btnVuelos_clicked()
+{
+    MaestroVuelosView *maestroVuelos = new MaestroVuelosView();
+    maestroVuelos->show();
+
+    close();
+}
+
+void MainView::on_btnCancelarReserva_clicked()
+{
+    CancelarReservaView *cancelarReserva = new CancelarReservaView();
+    cancelarReserva->show();
 
     close();
 }

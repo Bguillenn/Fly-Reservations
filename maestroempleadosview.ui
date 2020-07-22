@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaestroEmpleadosView</class>
+ <widget class="QWidget" name="MaestroEmpleadosView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>531</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #f8f8f8;
+font: 8pt &quot;Roboto&quot;;</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>750</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(153, 0, 206);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>501</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 30pt &quot;Roboto&quot;;
+color: #FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string>MAESTRO DE EMPLEADOS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSalir">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>10</y>
+      <width>120</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: #4A0064;
+border: none;
+color: #FFFFFF;
+font: 800 10pt &quot;Roboto&quot;;
+}
+
+QPushButton:hover{
+background-color: #F94E4E;
+}
+
+QPushButton:pressed{
+background-color: #EE2525;
+}</string>
+    </property>
+    <property name="text">
+     <string>SALIR</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 800 12pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>DATOS DEL EMPLEADO</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>Codigo</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtCodigo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>84</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtDocumento">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>130</y>
+     <width>151</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>110</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>Documento de identidad</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtNombres">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>251</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>Nombres</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>Apellidos</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtApellidos">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>251</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="txtFecha">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>127</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>Fecha de nacimiento</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbxSexo">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>310</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>290</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>Sexo</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>350</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>Contraseña</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtContrasenia">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>370</y>
+     <width>155</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbxTipo">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>370</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>350</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>Tipo</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tblEmpleados">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>110</y>
+     <width>461</width>
+     <height>291</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>80</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 800 12pt &quot;Roboto&quot;</string>
+   </property>
+   <property name="text">
+    <string>LISTA DE EMPLEADOS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnGuardar">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>470</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
+   <property name="text">
+    <string>GUARDAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCancelar">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>470</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #484848;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #333232
+}
+
+QPushButton:pressed{
+	background-color: #484848;
+}</string>
+   </property>
+   <property name="text">
+    <string>CANCELAR ACCION</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnNuevo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>420</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
+   <property name="text">
+    <string>NUEVO</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnModificar">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>420</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
+   <property name="text">
+    <string>MODIFICAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnEliminar">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>470</y>
+     <width>200</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #9900CE;
+color: #ffffff;
+font: 800 10pt &quot;Roboto&quot;;
+border:none;
+transition: all .5s;
+}
+
+QPushButton:hover{
+	background-color: #6B0C8C
+}
+
+QPushButton:pressed{
+	background-color: #A30DD8;
+}</string>
+   </property>
+   <property name="text">
+    <string>ELIMINAR</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

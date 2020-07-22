@@ -17,7 +17,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     buscarreservaview.cpp \
+    cancelarreservaview.cpp \
+    detallesreservaview.cpp \
     listarreservasview.cpp \
+    maestroempleadosview.cpp \
+    maestrovuelosview.cpp \
     main.cpp \
     loginview.cpp \
     mainview.cpp \
@@ -26,16 +30,24 @@ SOURCES += \
 
 HEADERS += \
     buscarreservaview.h \
+    cancelarreservaview.h \
+    detallesreservaview.h \
     listarreservasview.h \
     loginview.h \
+    maestroempleadosview.h \
+    maestrovuelosview.h \
     mainview.h \
     nuevareservadview.h \
     nuevareservauview.h
 
 FORMS += \
     buscarreservaview.ui \
+    cancelarreservaview.ui \
+    detallesreservaview.ui \
     listarreservasview.ui \
     loginview.ui \
+    maestroempleadosview.ui \
+    maestrovuelosview.ui \
     mainview.ui \
     nuevareservadview.ui \
     nuevareservauview.ui

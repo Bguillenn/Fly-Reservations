@@ -18,6 +18,8 @@ public:
 private slots:
     void on_btnSalir_clicked();
 
+    void on_btnMostrarInfo_clicked();
+
 private:
     Ui::BuscarReservaView *ui;
 };

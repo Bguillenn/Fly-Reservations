@@ -26,6 +26,12 @@ private slots:
 
     void on_btnBuscarReserva_clicked();
 
+    void on_btnEmpleados_clicked();
+
+    void on_btnVuelos_clicked();
+
+    void on_btnCancelarReserva_clicked();
+
 private:
     Ui::MainView *ui;
 };
