@@ -9,6 +9,8 @@ LoginView::LoginView(QWidget *parent)
     , ui(new Ui::LoginView)
 {
     ui->setupUi(this);
+
+    this->setWindowFlag(Qt::FramelessWindowHint);
 }
 
 LoginView::~LoginView()

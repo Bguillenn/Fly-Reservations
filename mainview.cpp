@@ -18,6 +18,7 @@ MainView::MainView(QWidget *parent) :
     ui(new Ui::MainView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(changeDateTime()));
     timer->start();

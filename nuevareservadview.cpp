@@ -11,6 +11,7 @@ NuevaReservaDView::NuevaReservaDView(QWidget *parent) :
     ui(new Ui::NuevaReservaDView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
 }
 
 NuevaReservaDView::~NuevaReservaDView()

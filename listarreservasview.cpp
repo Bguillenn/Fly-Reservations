@@ -9,6 +9,7 @@ ListarReservasView::ListarReservasView(QWidget *parent) :
     ui(new Ui::ListarReservasView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
     /*Configurando la tabla*/
     QStringList headers;
     ui->tblReservas->setColumnCount(6);

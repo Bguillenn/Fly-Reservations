@@ -9,6 +9,7 @@ CancelarReservaView::CancelarReservaView(QWidget *parent) :
     ui(new Ui::CancelarReservaView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
 }
 
 CancelarReservaView::~CancelarReservaView()

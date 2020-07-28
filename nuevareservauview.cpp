@@ -11,6 +11,7 @@ NuevaReservaUView::NuevaReservaUView(QWidget *parent) :
     ui(new Ui::NuevaReservaUView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
     /*Configurando el JTable*/
     QStringList headers;
     ui->tblVuelos->setColumnCount(5);

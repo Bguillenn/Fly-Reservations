@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     buscarreservaview.cpp \
     cancelarreservaview.cpp \
+    connector.cpp \
     detallesreservaview.cpp \
     listarreservasview.cpp \
     maestroempleadosview.cpp \
@@ -31,6 +32,7 @@ SOURCES += \
 HEADERS += \
     buscarreservaview.h \
     cancelarreservaview.h \
+    connector.h \
     detallesreservaview.h \
     listarreservasview.h \
     loginview.h \

@@ -10,6 +10,7 @@ BuscarReservaView::BuscarReservaView(QWidget *parent) :
     ui(new Ui::BuscarReservaView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
     QStringList headers;
     //Configurando la table
     ui->tblResultados->setColumnCount(6);

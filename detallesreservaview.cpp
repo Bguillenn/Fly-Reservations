@@ -9,6 +9,7 @@ DetallesReservaView::DetallesReservaView(QWidget *parent) :
     ui(new Ui::DetallesReservaView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
 }
 
 DetallesReservaView::~DetallesReservaView()

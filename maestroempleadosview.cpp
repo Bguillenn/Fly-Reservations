@@ -9,6 +9,7 @@ MaestroEmpleadosView::MaestroEmpleadosView(QWidget *parent) :
     ui(new Ui::MaestroEmpleadosView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
 }
 
 MaestroEmpleadosView::~MaestroEmpleadosView()

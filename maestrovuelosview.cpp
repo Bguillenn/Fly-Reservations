@@ -9,6 +9,7 @@ MaestroVuelosView::MaestroVuelosView(QWidget *parent) :
     ui(new Ui::MaestroVuelosView)
 {
     ui->setupUi(this);
+    this->setWindowFlag(Qt::FramelessWindowHint);
 }
 
 MaestroVuelosView::~MaestroVuelosView()
