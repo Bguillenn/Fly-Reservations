@@ -16,9 +16,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aeropuerto.cpp \
     buscarreservaview.cpp \
     cancelarreservaview.cpp \
     connector.cpp \
+    destino.cpp \
     detallesreservaview.cpp \
     empleado.cpp \
     listarreservasview.cpp \
@@ -31,9 +33,11 @@ SOURCES += \
     nuevareservauview.cpp
 
 HEADERS += \
+    aeropuerto.h \
     buscarreservaview.h \
     cancelarreservaview.h \
     connector.h \
+    destino.h \
     detallesreservaview.h \
     empleado.h \
     listarreservasview.h \
