@@ -20,6 +20,7 @@ SOURCES += \
     cancelarreservaview.cpp \
     connector.cpp \
     detallesreservaview.cpp \
+    empleado.cpp \
     listarreservasview.cpp \
     maestroempleadosview.cpp \
     maestrovuelosview.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     cancelarreservaview.h \
     connector.h \
     detallesreservaview.h \
+    empleado.h \
     listarreservasview.h \
     loginview.h \
     maestroempleadosview.h \

@@ -115,6 +115,9 @@ background-color: #EE2525;
    </property>
   </widget>
   <widget class="QLineEdit" name="txtCodigo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -129,6 +132,9 @@ font: 12pt &quot;Roboto&quot;;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="txtDocumento">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -159,6 +165,9 @@ font: 12pt &quot;Roboto&quot;;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="txtNombres">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -205,6 +214,9 @@ font: 12pt &quot;Roboto&quot;;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="txtApellidos">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -222,6 +234,9 @@ font: 12pt &quot;Roboto&quot;;</string>
    </property>
   </widget>
   <widget class="QDateEdit" name="txtFecha">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -252,6 +267,9 @@ font: 12pt &quot;Roboto&quot;;</string>
    </property>
   </widget>
   <widget class="QComboBox" name="cbxSexo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -264,6 +282,16 @@ font: 12pt &quot;Roboto&quot;;</string>
     <string notr="true">background-color: #ffffff;
 font: 12pt &quot;Roboto&quot;;</string>
    </property>
+   <item>
+    <property name="text">
+     <string>Masculino</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Femenino</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
@@ -298,11 +326,14 @@ font: 12pt &quot;Roboto&quot;;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="txtContrasenia">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>370</y>
-     <width>155</width>
+     <width>141</width>
      <height>30</height>
     </rect>
    </property>
@@ -315,11 +346,14 @@ font: 12pt &quot;Roboto&quot;;</string>
    </property>
   </widget>
   <widget class="QComboBox" name="cbxTipo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>160</x>
      <y>370</y>
-     <width>81</width>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -327,11 +361,21 @@ font: 12pt &quot;Roboto&quot;;</string>
     <string notr="true">background-color: #ffffff;
 font: 12pt &quot;Roboto&quot;;</string>
    </property>
+   <item>
+    <property name="text">
+     <string>Vendedor</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Admin</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>160</x>
      <y>350</y>
      <width>51</width>
      <height>16</height>
@@ -353,6 +397,9 @@ font: 12pt &quot;Roboto&quot;;</string>
      <height>291</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label_11">
    <property name="geometry">
@@ -371,6 +418,9 @@ font: 12pt &quot;Roboto&quot;;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btnGuardar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -394,6 +444,11 @@ QPushButton:hover{
 
 QPushButton:pressed{
 	background-color: #A30DD8;
+}
+
+QPushButton:disabled{
+	color: #c0c0c0;
+	background-color: #c8c8c8;
 }</string>
    </property>
    <property name="text">
@@ -401,6 +456,9 @@ QPushButton:pressed{
    </property>
   </widget>
   <widget class="QPushButton" name="btnCancelar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -424,6 +482,11 @@ QPushButton:hover{
 
 QPushButton:pressed{
 	background-color: #484848;
+}
+
+QPushButton:disabled{
+	color: #c0c0c0;
+	background-color: #c8c8c8;
 }</string>
    </property>
    <property name="text">

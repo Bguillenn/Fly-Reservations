@@ -24,10 +24,10 @@ int main(int argc, char *argv[])
                "nombres VARCHAR(40) NOT NULL, "
                "apellidos VARCHAR(40) NOT NULL, "
                "fnacimiento VARCHAR(22) NOT NULL DEFAULT '2000-03-11 00:00:00', "
-               "sexo ENUM('M','F') NOT NULL DEFAULT 'M',"
+               "sexo CHAR NOT NULL DEFAULT 'M',"
                "dni VARCHAR(8) NOT NULL DEFAULT '00000000', "
                "contrasenia VARCHAR(20) NOT NULL, "
-               "tipo ENUM('V', 'A') NOT NULL DEFAULT 'V', "
+               "tipo CHAR NOT NULL DEFAULT 'V', "
                "PRIMARY KEY('codigo'))");
 
         //Creamos la tabla origen si no existe
@@ -71,7 +71,26 @@ int main(int argc, char *argv[])
                "FOREIGN KEY('vuelo') REFERENCES vuelo('codigo'), "
                "FOREIGN KEY('vendedor') REFERENCES empleado('codigo'))");
 
-         //Cerramos la base de datos
+
+        //Añadiremos algunos origenes y destinos a nuestra base de datos y un usuario
+        //de tipo admin para iniciar sesion siempre con ese usuario
+        q.exec("INSERT INTO origen VALUES"
+                   "('AQP-001','Aeropuerto Internacional Rodriguez Ballon', 'Arequipa', 'Peru'),"
+                   "('LIM-001','Aeropuerto Internacional Jorge Chavez', 'Lima', 'Peru'), "
+                   "('CUZ-001','Aeropuerto Internacional Alejandro Velasco Astete', 'Cuzco', 'Peru'), "
+                   "('CIX-001','Aeropuerto Internacional Capitan FAP Jose A. Quiñones', 'Chiclayo', 'Peru'), "
+                   "('TRU-001','Aeropuerto Internacional Capitan FAP Carlos Martinez de Pinillos', 'Trujillo', 'Peru')");
+
+       q.exec("INSERT INTO destino VALUES"
+                   "('AQP-001','Aeropuerto Internacional Rodriguez Ballon', 'Arequipa', 'Peru'),"
+                   "('LIM-001','Aeropuerto Internacional Jorge Chavez', 'Lima', 'Peru'), "
+                   "('CUZ-001','Aeropuerto Internacional Alejandro Velasco Astete', 'Cuzco', 'Peru'), "
+                   "('CIX-001','Aeropuerto Internacional Capitan FAP Jose A. Quiñones', 'Chiclayo', 'Peru'), "
+                   "('TRU-001','Aeropuerto Internacional Capitan FAP Carlos Martinez de Pinillos', 'Trujillo', 'Peru')");
+
+       q.exec("INSERT INTO empleado VALUES('EMP-001','Administrador general', 'admin', '2000-01-01 00:00:00', 'M', '00000000', 'admin', 'A')");
+
+       //Cerramos la base de datos
         db.close();
     } catch (QString &e) {
         QMessageBox::warning(nullptr, "Error", e);
