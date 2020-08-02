@@ -31,7 +31,8 @@ SOURCES += \
     mainview.cpp \
     nuevareservadview.cpp \
     nuevareservauview.cpp \
-    vuelo.cpp
+    vuelo.cpp \
+    vueloscontroller.cpp
 
 HEADERS += \
     aeropuerto.h \
@@ -48,7 +49,8 @@ HEADERS += \
     mainview.h \
     nuevareservadview.h \
     nuevareservauview.h \
-    vuelo.h
+    vuelo.h \
+    vueloscontroller.h
 
 FORMS += \
     buscarreservaview.ui \
