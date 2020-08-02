@@ -231,7 +231,7 @@ background-color: #EE2525;
     <string notr="true">font: 10pt &quot;Roboto&quot;</string>
    </property>
    <property name="text">
-    <string>Fecha de nacimiento</string>
+    <string>Fecha de vuelo</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
