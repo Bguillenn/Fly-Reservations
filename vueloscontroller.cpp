@@ -11,7 +11,7 @@ QVector<Vuelo> vuelosController::filtrarVuelos(QString codOri,QString codDest, i
         for(int i=0; i< vuelos.size();i++){
                 if((QString::compare(vuelos[i].getOrigenCodigo(),codOri,Qt::CaseInsensitive)==1
                         && QString::compare(vuelos[i].getDestinoCodigo(),codDest,Qt::CaseInsensitive)==1)
-                        || vuelos[i].getCapacidad()== pasajeros){//pasajeros y capacidad con dudas
+                        && vuelos[i].getAsientosDisponibles()>= pasajeros){//asientos disponibles > pasajeros
                     data << Vuelo(
                                 vuelos[i].getCodigo(),
                                 vuelos[i].getOrigenCodigo(),
