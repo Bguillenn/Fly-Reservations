@@ -393,6 +393,9 @@ QPushButton:pressed{
     <string notr="true">background-color: #ffffff;
 font: 12pt &quot;Roboto&quot;;</string>
    </property>
+   <property name="maximum">
+    <number>999</number>
+   </property>
   </widget>
   <widget class="QComboBox" name="cbxOrigen">
    <property name="geometry">
@@ -448,6 +451,9 @@ font: 12pt &quot;Roboto&quot;;</string>
    <property name="styleSheet">
     <string notr="true">background-color: #ffffff;
 font: 12pt &quot;Roboto&quot;;</string>
+   </property>
+   <property name="maximum">
+    <double>999.990000000000009</double>
    </property>
   </widget>
  </widget>

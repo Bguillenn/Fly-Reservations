@@ -26,7 +26,7 @@ bool Vuelo::guardar(Vuelo vuelo){
             query.bindValue(1,vuelo.getOrigenCodigo());
             query.bindValue(2,vuelo.getDestinoCodigo());
             query.bindValue(3,vuelo.getCapacidad());
-            query.bindValue(4,vuelo.getFechaPartida().toString("yyyy-MM-dd"));
+            query.bindValue(4,vuelo.getFechaPartida().toString("yyyy-MM-dd hh:mm"));
             query.bindValue(5,vuelo.getAsientosDisponibles());
             query.bindValue(6,vuelo.getPrecioAsiento());
 
@@ -55,7 +55,7 @@ bool Vuelo::modificar(Vuelo vuelo){
             query.addBindValue(vuelo.getOrigenCodigo());
             query.addBindValue(vuelo.getDestinoCodigo());
             query.addBindValue(vuelo.getCapacidad());
-            query.addBindValue(vuelo.getFechaPartida().toString("yyyy-MM-dd"));
+            query.addBindValue(vuelo.getFechaPartida().toString("yyyy-MM-dd hh:mm"));
             query.addBindValue(vuelo.getAsientosDisponibles());
             query.addBindValue(vuelo.getPrecioAsiento());
             query.addBindValue(vuelo.getCodigo());
@@ -157,14 +157,14 @@ QVector<Vuelo> Vuelo::todos(){
                 QDateTime partidaVue;
                 QDate partida;
                 while (query.next()) {
-                    partida.fromString(query.value(4).toString(),"yyyy-MM-dd");
+                    partida.fromString(query.value(4).toString(),"yyyy-MM-dd hh:mm");
                     partidaVue.setDate(partida);
                     data << Vuelo(
                                   query.value(0).toString(),
                                   query.value(1).toString(),
                                   query.value(2).toString(),
                                   query.value(3).toInt(),//convertir a entero
-                                  partidaVue,
+                                   partidaVue,
                                   query.value(5).toInt(),//entero
                                   query.value(6).toFloat()//flotante
                                   );
