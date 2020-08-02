@@ -30,7 +30,8 @@ SOURCES += \
     loginview.cpp \
     mainview.cpp \
     nuevareservadview.cpp \
-    nuevareservauview.cpp
+    nuevareservauview.cpp \
+    vuelo.cpp
 
 HEADERS += \
     aeropuerto.h \
@@ -46,7 +47,8 @@ HEADERS += \
     maestrovuelosview.h \
     mainview.h \
     nuevareservadview.h \
-    nuevareservauview.h
+    nuevareservauview.h \
+    vuelo.h
 
 FORMS += \
     buscarreservaview.ui \
