@@ -1,4 +1,4 @@
-#include "destino.h"
+#include "origen.h"
 #include "QString"
 #include <fstream>
 #include <QVector>
@@ -7,25 +7,28 @@
 #include <QDebug>
 #include <QMessageBox>
 using namespace std;
-Destino::Destino()
+
+Origen::Origen()
 {
+
+
 }
-Destino::Destino(QString codigo, QString nombre_Destino,QString nombre_ciudad,QString nombre_pais)
+Origen::Origen(QString codigo, QString nombre_Origen,QString nombre_ciudad,QString nombre_pais)
 {
-    Destino::codigo=codigo;
-    Destino::Nombre_Destino=nombre_Destino;
-    Destino::Nombre_Ciudad=nombre_ciudad;
-    Destino::Nombre_Pais=nombre_pais;
+    Origen::codigo=codigo;
+    Origen::Nombre_Origen=nombre_Origen;
+    Origen::Nombre_Ciudad=nombre_ciudad;
+    Origen::Nombre_Pais=nombre_pais;
 }
-bool Destino::guardar(Destino tmp){
+bool Origen::guardar(Origen tmp){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
         if(db.open()){
             QSqlQuery query;
-            query.prepare("INSERT INTO Destino VALUES(?,?,?,?)");
+            query.prepare("INSERT INTO origen VALUES(?,?,?,?)");
             query.bindValue(0, tmp.getCodigo());
-            query.bindValue(1, tmp.getNombreDestino());
+            query.bindValue(1, tmp.getNombreOrigen());
             query.bindValue(2, tmp.getNombreCiudad());
             query.bindValue(3, tmp.getNombrePais());
 
@@ -43,14 +46,14 @@ bool Destino::guardar(Destino tmp){
       throw e;
     }
 }
-bool Destino::modificar(Destino tmp){
+bool Origen::modificar(Origen tmp){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
         if(db.open()){
             QSqlQuery query;
-            query.prepare("UPDATE Destino SET nombre=?, ciudad=?, pais=? WHERE codigo=?");
-            query.addBindValue(tmp.getNombreDestino());
+            query.prepare("UPDATE origen SET nombre=?, ciudad=?, pais=? WHERE codigo=?");
+            query.addBindValue(tmp.getNombreOrigen());
             query.addBindValue(tmp.getNombreCiudad());
             query.addBindValue(tmp.getNombrePais());
 
@@ -74,13 +77,13 @@ bool Destino::modificar(Destino tmp){
         throw e;
     }
 }
-bool Destino::eliminar(QString codigo){
+bool Origen::eliminar(QString codigo){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
         if(db.open()){
             QSqlQuery query;
-            query.prepare("DELETE FROM Destino WHERE codigo = ?");
+            query.prepare("DELETE FROM origen WHERE codigo = ?");
             query.bindValue(0, codigo);
             if(query.exec()){
                 if(query.numRowsAffected() > 0){
@@ -100,17 +103,17 @@ bool Destino::eliminar(QString codigo){
         throw e;
     }
 }
-Destino Destino::buscarPorCodigo(QString codigo){
+Origen Origen::buscarPorCodigo(QString codigo){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
         if(db.open()){
             QSqlQuery query;
-            query.prepare("SELECT * FROM Destino WHERE codigo=?");
+            query.prepare("SELECT * FROM origen WHERE codigo=?");
             query.addBindValue(codigo);
             if(query.exec()){
                 if(query.next()){
-                    Destino temp(
+                    Origen temp(
                                     query.value(0).toString(),
                                     query.value(1).toString(),
                                     query.value(2).toString(),
@@ -119,7 +122,7 @@ Destino Destino::buscarPorCodigo(QString codigo){
                     db.close();
                     return temp;
                 }else{
-                    throw QString("No se encontro el Destino");
+                    throw QString("No se encontro el Origen");
                 }
             }else{
                 db.close();
@@ -131,18 +134,18 @@ Destino Destino::buscarPorCodigo(QString codigo){
         throw e;
     }
 }
-QVector<Destino> Destino::todos(){
+QVector<Origen> Origen::todos(){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
         if(db.open()){
             QSqlQuery query;
-            if(query.exec("SELECT * FROM Destino")){
-                QVector<Destino> data;
+            if(query.exec("SELECT * FROM origen")){
+                QVector<Origen> data;
                 QDateTime fechaNac;
                 while(query.next()){
 
-                    data << Destino(
+                    data << Origen(
                                 query.value(0).toString(),
                                 query.value(1).toString(),
                                 query.value(2).toString(),
@@ -160,33 +163,34 @@ QVector<Destino> Destino::todos(){
     }
 }
 
-QString Destino::getCodigo()
+QString Origen::getCodigo()
 {
-    return Destino::codigo;
+    return Origen::codigo;
 }
-void Destino::setCodigo(QString codigo){
-    Destino::codigo= codigo;
+void Origen::setCodigo(QString codigo){
+    Origen::codigo= codigo;
 }
 
-QString Destino::getNombrePais()
+QString Origen::getNombrePais()
 {
-    return Destino::Nombre_Pais;
+    return Origen::Nombre_Pais;
 }
-void Destino::setNombrePais(QString Nombre_pais){
-    Destino::Nombre_Pais = Nombre_pais;
+void Origen::setNombrePais(QString Nombre_pais){
+    Origen::Nombre_Pais = Nombre_pais;
 }
 
-QString Destino::getNombreCiudad()
+QString Origen::getNombreCiudad()
 {
-    return Destino::Nombre_Ciudad;
+    return Origen::Nombre_Ciudad;
 }
-void Destino::setNombreCiudad(QString Nombre_ciudad){
-    Destino::Nombre_Ciudad = Nombre_ciudad;
+void Origen::setNombreCiudad(QString Nombre_ciudad){
+    Origen::Nombre_Ciudad = Nombre_ciudad;
 }
-QString Destino::getNombreDestino()
+QString Origen::getNombreOrigen()
 {
-    return Destino::Nombre_Destino;
+    return Origen::Nombre_Origen;
 }
-void Destino::setNombreDestino(QString Nombre_Destino){
-    Destino::Nombre_Destino = Nombre_Destino;
+void Origen::setNombreOrigen(QString Nombre_Origen){
+    Origen::Nombre_Origen = Nombre_Origen;
 }
+

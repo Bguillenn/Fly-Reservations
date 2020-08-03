@@ -6,27 +6,27 @@
 #include <connector.h>
 #include <QSqlDatabase>
 #include <QSqlQuery>
-class destino
+class Destino
 {
     QString codigo;
-    QString Nombre_aeropuerto;
+    QString Nombre_Destino;
     QString Nombre_Ciudad;
     QString Nombre_Pais;
 
     public:
-        destino();
-        bool guardar(destino temp);
-        bool modificar(destino temp );
+        Destino();
+        bool guardar(Destino temp);
+        bool modificar(Destino temp );
         bool eliminar(QString codigo);
-        destino buscarPorCodigo(QString cod);
-        QVector<destino> todos();
-        destino(QString codigo, QString nombre_aeropuerto,QString nombre_ciudad,QString nombre_pais);
+        Destino buscarPorCodigo(QString cod);
+        QVector<Destino> todos();
+        Destino(QString codigo, QString nombre_Destino,QString nombre_ciudad,QString nombre_pais);
         void setCodigo(QString codigo);
-        void setNombreAeropuerto(QString Nombre_aeropuerto);
+        void setNombreDestino(QString Nombre_Destino);
         void setNombreCiudad(QString Nombre_ciudad);
         void setNombrePais(QString Nombre_pais);
         QString getCodigo();
-        QString getNombreAeropuerto();
+        QString getNombreDestino();
         QString getNombreCiudad();
         QString getNombrePais();
 };

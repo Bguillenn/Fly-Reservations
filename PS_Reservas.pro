@@ -32,6 +32,7 @@ SOURCES += \
     mainview.cpp \
     nuevareservadview.cpp \
     nuevareservauview.cpp \
+    origen.cpp \
     vuelo.cpp \
     vueloscontroller.cpp
 
@@ -51,6 +52,7 @@ HEADERS += \
     mainview.h \
     nuevareservadview.h \
     nuevareservauview.h \
+    origen.h \
     vuelo.h \
     vueloscontroller.h
 
