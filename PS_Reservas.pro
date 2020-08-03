@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     aeropuerto.cpp \
+    logincontroller.cpp \
     buscarreservaview.cpp \
     cancelarreservaview.cpp \
     connector.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
 
 HEADERS += \
     aeropuerto.h \
+    logincontroller.h \
     buscarreservaview.h \
     cancelarreservaview.h \
     connector.h \

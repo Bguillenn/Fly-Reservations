@@ -3,6 +3,7 @@
 #include <QPixmap>
 #include <QMessageBox>
 #include <mainview.h>
+#include "logincontroller.h"
 
 LoginView::LoginView(QWidget *parent)
     : QMainWindow(parent)
@@ -34,8 +35,14 @@ void LoginView::on_btnEntrar_clicked()
         return;
     }
 
-    MainView *mainView = new MainView();
-    mainView->show();
+    try {
+        LoginController::loginEmpleado(txtCodigo, txtContra);
+        MainView *mainView = new MainView();
+        mainView->show();
 
-    close();
+        close();
+    } catch (QString &e) {
+        QMessageBox::warning(this, "Error", e);
+        ui->txtCodigo->setFocus();
+    }
 }

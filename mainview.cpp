@@ -4,6 +4,8 @@
 #include <QTimer>
 #include <QDateTime>
 
+#include "logincontroller.h"
+
 /* Importación de las vistas*/
 #include <loginview.h>
 #include "nuevareservauview.h"
@@ -18,6 +20,7 @@ MainView::MainView(QWidget *parent) :
     ui(new Ui::MainView)
 {
     ui->setupUi(this);
+    configurarDatos();
     this->setWindowFlag(Qt::FramelessWindowHint);
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(changeDateTime()));
@@ -35,6 +38,7 @@ void MainView::on_btnCerrarSesion_clicked()
    reply = QMessageBox::question(this, "Cerrar Sesión", "¿Realmente deseas cerrar sesión?", QMessageBox::Yes|QMessageBox::No);
 
    if(reply == QMessageBox::Yes){
+       LoginController::closeSession();
        LoginView *loginView = new LoginView();
        loginView->show();
 
@@ -97,4 +101,27 @@ void MainView::on_btnCancelarReserva_clicked()
     cancelarReserva->show();
 
     close();
+}
+
+
+void MainView::configurarDatos(){
+    Empleado *userLogged = LoginController::getUserLogged();
+    if(userLogged->getTipo().compare("V") == 0){
+        ui->btnEmpleados->setVisible(false);
+        ui->btnVuelos->setVisible(false);
+    }
+
+    ui->lblUserName->setText(userLogged->getNombres());
+    ui->lblUserDoc->setText(userLogged->getDNI());
+    if(userLogged->getSexo().compare("M") == 0)
+        ui->lblUserSexo->setText("Masculino");
+    else
+        ui->lblUserSexo->setText("Femenino");
+
+    ui->lblUserFecNac->setText(userLogged->getFechaNacimiento().toString("dd-MM-yyyy"));
+
+    if(userLogged->getTipo().compare("V") == 0)
+        ui->lblUserType->setText("Vendedor");
+    else
+        ui->lblUserType->setText("Administrador");
 }

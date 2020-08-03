@@ -1,5 +1,5 @@
-#ifndef RESERVA_H
-#define RESERVA_H
+#ifndef reserva_H
+#define reserva_H
 #include <QString>
 #include <QVector>
 #include <QFile>
@@ -30,14 +30,14 @@ public:
     void setCantidadAsientos(int cantidad_asientos);
     void setDniCliente(QString dni_cliente);
     void setPrecioTotal(float precio_total);
-    void setFechaReserva(QDateTime fecha_reserva);
+    void setFechareserva(QDateTime fecha_reserva);
     QString getCodigo();
     QString getCodigoVuelo();
     QString getCodigoVendedor();
     QString getDniCliente();
     int getCantidadAsientos();
     float getPrecioTotal();
-    QDateTime getFechaReserva();
+    QDateTime getFechareserva();
 };
 
-#endif // RESERVA_H
+#endif // reserva_H

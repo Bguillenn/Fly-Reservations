@@ -113,7 +113,8 @@ Empleado Empleado::buscarPorCodigo(QString codigo){
         QSqlDatabase db = con.initDataBase();
         if(db.open()){
             QSqlQuery query;
-            query.prepare("SELECT * FROM empleado WHERE codigo=?");
+            query.prepare("SELECT * FROM empleado WHERE codigo=? or dni=?");
+            query.addBindValue(codigo);
             query.addBindValue(codigo);
             if(query.exec()){
                 if(query.next()){
