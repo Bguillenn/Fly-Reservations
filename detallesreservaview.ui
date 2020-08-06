@@ -268,7 +268,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>RSV-1</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="lblCodigoVuelo">
@@ -285,7 +285,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>VL-1</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="lblAsientos">
@@ -302,7 +302,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>4 ASIENTOS</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="lblOrigen">
@@ -319,7 +319,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>AREQUIPA - PERÚ</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="lblFechaVuelo">
@@ -336,7 +336,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>20/07/2020 15:30</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="lblFechaReserva">
@@ -353,7 +353,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>18/07/2020</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="lblDestino">
@@ -370,7 +370,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>LIMA - PERÚ</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="lblRealizado">
@@ -387,7 +387,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>SIN REALIZAR</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="lblPrecioTotal">
@@ -404,7 +404,7 @@ border: none;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>S/ 600.00</string>
+     <string/>
     </property>
    </widget>
   </widget>

@@ -18,6 +18,10 @@ public:
 private slots:
     void on_btnCancelar_clicked();
 
+    void on_btnBuscar_clicked();
+
+    void on_btnConfirmar_clicked();
+
 private:
     Ui::CancelarReservaView *ui;
 };

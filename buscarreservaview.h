@@ -20,8 +20,13 @@ private slots:
 
     void on_btnMostrarInfo_clicked();
 
+    void on_btnBuscarDni_clicked();
+
+    void on_btnBuscarCodigo_clicked();
+
 private:
     Ui::BuscarReservaView *ui;
+    void cargarResultados(int);
 };
 
 #endif // BUSCARRESERVAVIEW_H

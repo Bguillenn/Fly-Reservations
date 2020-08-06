@@ -15,11 +15,11 @@ class Destino
 
     public:
         Destino();
-        bool guardar(Destino temp);
-        bool modificar(Destino temp );
-        bool eliminar(QString codigo);
-        Destino buscarPorCodigo(QString cod);
-        QVector<Destino> todos();
+        static bool guardar(Destino temp);
+        static bool modificar(Destino temp );
+        static bool eliminar(QString codigo);
+        static Destino buscarPorCodigo(QString cod);
+        static QVector<Destino> todos();
         Destino(QString codigo, QString nombre_Destino,QString nombre_ciudad,QString nombre_pais);
         void setCodigo(QString codigo);
         void setNombreDestino(QString Nombre_Destino);

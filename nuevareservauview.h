@@ -20,8 +20,14 @@ private slots:
 
     void on_btnSiguiente_clicked();
 
+    void on_btnBuscar_clicked();
+
 private:
     Ui::NuevaReservaUView *ui;
+    void llenarTabla();
+    void llenarTablaConFiltro(QString,QString,int,QDateTime);
+    void llenarOrigen();
+    void llenarDestino();
 };
 
 #endif // NUEVARESERVAUVIEW_H

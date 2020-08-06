@@ -17,11 +17,11 @@ QString Nombre_Pais;
 
 public:
     Origen();
-    bool guardar(Origen temp);
-    bool modificar(Origen temp );
-    bool eliminar(QString codigo);
-    Origen buscarPorCodigo(QString cod);
-    QVector<Origen> todos();
+    static bool guardar(Origen temp);
+    static bool modificar(Origen temp );
+    static bool eliminar(QString codigo);
+    static Origen buscarPorCodigo(QString cod);
+    static QVector<Origen> todos();
     Origen(QString codigo, QString nombre_Origen,QString nombre_ciudad,QString nombre_pais);
     void setCodigo(QString codigo);
     void setNombreOrigen(QString Nombre_Origen);

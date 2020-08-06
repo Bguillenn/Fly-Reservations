@@ -18,9 +18,12 @@ public:
 private slots:
     void on_btnSalir_clicked();
 
+    void on_chkTodas_stateChanged(int arg1);
+
 private:
     Ui::ListarReservasView *ui;
     void actualizarLabelResultados();
+    void cargarTabla();
 };
 
 #endif // LISTARRESERVASVIEW_H

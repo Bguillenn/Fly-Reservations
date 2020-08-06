@@ -122,8 +122,11 @@ QPushButton:pressed{
      <height>251</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;</string>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="txtQuery">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -133,7 +136,8 @@ QPushButton:pressed{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 800 12pt &quot;Roboto&quot;</string>
+    <string notr="true">font: 800 12pt &quot;Roboto&quot;;
+background-color: #ffffff;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btnBuscarDni">

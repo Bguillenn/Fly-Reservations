@@ -206,7 +206,7 @@ border: 2px solid #f0f0f0;</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>Codigo de la reserva:</string>
+     <string>Codigo del vuelo:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -345,7 +345,7 @@ border: none;</string>
      <string>S/ 600.00</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lblCodigoReserva">
+   <widget class="QLabel" name="lblCodigoVuelo">
     <property name="geometry">
      <rect>
       <x>150</x>

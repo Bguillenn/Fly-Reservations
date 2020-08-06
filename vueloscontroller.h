@@ -1,5 +1,5 @@
-#ifndef VUELOSCONTROLLER_H
-#define VUELOSCONTROLLER_H
+#ifndef VuelosController_H
+#define VuelosController_H
 
 #include "vuelo.h"
 
@@ -7,13 +7,14 @@
 
 
 
-class vuelosController
+class VuelosController
 {
 public:
-    vuelosController();
-    QVector<Vuelo> filtrarVuelos(QString, QString,int);
+    VuelosController();
+    QVector<Vuelo> filtrarVuelos(QString, QString,int, QDateTime);
     bool reducirAsientosDisponibles(QString,int);
+    bool ampliarAsientosDisponibles(QString, int);
     bool realizado(QString);
 };
 
-#endif // VUELOSCONTROLLER_H
+#endif // VuelosController_H

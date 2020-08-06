@@ -1,17 +1,18 @@
 #include "vueloscontroller.h"
-
-vuelosController::vuelosController()
+#include <QMessageBox>
+VuelosController::VuelosController()
 {
 
 }
-QVector<Vuelo> vuelosController::filtrarVuelos(QString codOri,QString codDest, int pasajeros){
+QVector<Vuelo> VuelosController::filtrarVuelos(QString codOri,QString codDest, int pasajeros, QDateTime fecha){
     QVector<Vuelo>data;
     QVector<Vuelo>vuelos =Vuelo::todos();
     try {
         for(int i=0; i< vuelos.size();i++){
-                if((QString::compare(vuelos[i].getOrigenCodigo(),codOri,Qt::CaseInsensitive)==1
-                        && QString::compare(vuelos[i].getDestinoCodigo(),codDest,Qt::CaseInsensitive)==1)
-                        && vuelos[i].getAsientosDisponibles()>= pasajeros){//asientos disponibles > pasajeros
+                if((QString::compare(vuelos[i].getOrigenCodigo(),codOri,Qt::CaseInsensitive) == 0
+                        && QString::compare(vuelos[i].getDestinoCodigo(),codDest,Qt::CaseInsensitive) == 0)
+                        && vuelos[i].getAsientosDisponibles() >= pasajeros//asientos disponibles > pasajeros
+                        && vuelos[i].getFechaPartida() >= fecha){ //Comparamos la fecha
                     data << Vuelo(
                                 vuelos[i].getCodigo(),
                                 vuelos[i].getOrigenCodigo(),
@@ -24,7 +25,7 @@ QVector<Vuelo> vuelosController::filtrarVuelos(QString codOri,QString codDest, i
                 }
             }
         if(data.isEmpty()){
-            throw  QString  ("No se, encontro Vuelos disponibles");
+            throw  QString  ("No se encontro vuelos disponibles");
 
         }else{
             return data;
@@ -35,7 +36,7 @@ QVector<Vuelo> vuelosController::filtrarVuelos(QString codOri,QString codDest, i
         throw e;
     }
 }
-bool vuelosController::reducirAsientosDisponibles(QString vueloCod , int asientos){
+bool VuelosController::reducirAsientosDisponibles(QString vueloCod , int asientos){
     Vuelo vuelo = Vuelo::buscarPorCodigo(vueloCod);
     try {
         if(vuelo.getAsientosDisponibles()>0){
@@ -56,7 +57,26 @@ bool vuelosController::reducirAsientosDisponibles(QString vueloCod , int asiento
         throw e;
     }
 }
-bool vuelosController::realizado(QString vueloCod){
+
+bool VuelosController::ampliarAsientosDisponibles(QString vueloCod , int asientos){
+    Vuelo vuelo = Vuelo::buscarPorCodigo(vueloCod);
+    try {
+
+        if(asientos+vuelo.getAsientosDisponibles() <= vuelo.getCapacidad()){
+            int newCapacity = vuelo.getAsientosDisponibles()+asientos;//disminución de la capacidad
+            vuelo.setAsientosDisponibles(newCapacity);
+            Vuelo::modificar(vuelo);
+            return true;
+        }else{
+            throw QString("Los asientos disponibles añadidos sobrepasa la capacidad");
+            return false;
+        }
+    } catch (QString &e) {
+        throw e;
+    }
+}
+
+bool VuelosController::realizado(QString vueloCod){
     Vuelo vuelo = Vuelo::buscarPorCodigo(vueloCod);
 
     QDateTime fecAct;

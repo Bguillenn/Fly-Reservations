@@ -1,28 +1,30 @@
 #include "reserva.h"
+
 #include "QString"
 #include <fstream>
 #include <QVector>
+#include <QDateTime>
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>
 #include <QMessageBox>
 using namespace std;
 
-reserva::reserva()
+Reserva::Reserva()
 {
 
 }
-reserva(QString codigo, QString codigo_vuelo, QString codigo_vendedor, QString dni_cliente, int cantidad_asientos, float precio_total, QDateTime fecha_reserva)
+Reserva::Reserva(QString codigo, QString codigo_vuelo, QString codigo_vendedor, QString dni_cliente, int cantidad_asientos, float precio_total, QDateTime fecha_reserva)
 {
-    reserva::codigo=codigo;
-    reserva::codigo_vuelo=codigo_vuelo;
-    reserva::codigo_vendedor=codigo_vendedor;
-    reserva::dni_cliente=dni_cliente;
-    reserva::cantidad_asientos=cantidad_asientos;
-    reserva::precio_total=precio_total;
-    reserva::fecha_reserva=fecha_reserva;
+    Reserva::codigo=codigo;
+    Reserva::codigo_vuelo=codigo_vuelo;
+    Reserva::codigo_vendedor=codigo_vendedor;
+    Reserva::dni_cliente=dni_cliente;
+    Reserva::cantidad_asientos=cantidad_asientos;
+    Reserva::precio_total=precio_total;
+    Reserva::fecha_reserva=fecha_reserva;
 }
-bool reserva::guardar(reserva tmp){
+bool Reserva::guardar(Reserva tmp){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
@@ -51,7 +53,7 @@ bool reserva::guardar(reserva tmp){
       throw e;
     }
 }
-bool reserva::modificar(reserva tmp){
+bool Reserva::modificar(Reserva tmp){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
@@ -85,7 +87,7 @@ bool reserva::modificar(reserva tmp){
         throw e;
     }
 }
-bool reserva::eliminar(QString codigo){
+bool Reserva::eliminar(QString codigo){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
@@ -111,7 +113,7 @@ bool reserva::eliminar(QString codigo){
         throw e;
     }
 }
-reserva reserva::buscarPorCodigo(QString codigo){
+Reserva Reserva::buscarPorCodigo(QString codigo){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
@@ -121,14 +123,14 @@ reserva reserva::buscarPorCodigo(QString codigo){
             query.addBindValue(codigo);
             if(query.exec()){
                 if(query.next()){
-                    reserva temp(
-                                    query.value(0).toString(),
-                                    query.value(1).toString(),
-                                    query.value(2).toString(),
-                                    query.value(3).toString(),
-                                    QString::fromStdString(query.value(4).toString()).toInt(),
-                                    QString::fromStdString(query.value(5).toString()).toFloat();,
-                                    query.value(6).toString()
+                    Reserva temp(
+                                query.value(0).toString(),
+                                query.value(1).toString(),
+                                query.value(2).toString(),
+                                query.value(3).toString(),
+                                query.value(4).toInt(),
+                                query.value(5).toFloat(),
+                                query.value(6).toDateTime()
                                 );
                     db.close();
                     return temp;
@@ -145,24 +147,24 @@ reserva reserva::buscarPorCodigo(QString codigo){
         throw e;
     }
 }
-QVector<reserva> reserva::todos(){
+QVector<Reserva> Reserva::todos(){
     Connector con;
     try {
         QSqlDatabase db = con.initDataBase();
         if(db.open()){
             QSqlQuery query;
             if(query.exec("SELECT * FROM reserva")){
-                QVector<reserva> data;
+                QVector<Reserva> data;
                 while(query.next()){
 
-                    data << reserva(
+                    data << Reserva(
                       query.value(0).toString(),
                       query.value(1).toString(),
                       query.value(2).toString(),
                       query.value(3).toString(),
-                      QString::fromStdString(query.value(4).toString()).toInt(),
-                      QString::fromStdString(query.value(5).toString()).toFloat();,
-                      query.value(6).toString()
+                      query.value(4).toInt(),
+                      query.value(5).toFloat(),
+                      query.value(6).toDateTime()
                             );
                }
                 return data;
@@ -179,63 +181,64 @@ QVector<reserva> reserva::todos(){
 //---------------------------------------------------
 //getters
 //---------------------------------------------------
-QString reserva::getCodigo()
+QString Reserva::getCodigo()
 {
-    return reserva::codigo;
+    return Reserva::codigo;
 }
-QString getCodigoVuelo()
+QString Reserva::getCodigoVuelo()
 {
-  return reserva::codigo_vuelo;
+  return Reserva::codigo_vuelo;
 }
-QString getCodigoVendedor()
+QString Reserva::getCodigoVendedor()
 {
-  return reserva::codigo_vendedor;
+  return Reserva::codigo_vendedor;
 }
-QString getDniCliente()
+QString Reserva::getDniCliente()
 {
-  return reserva::dni_cliente;
+  return Reserva::dni_cliente;
 }
-int getCantidadAsientos()
+int Reserva::getCantidadAsientos()
 {
-  return reserva::cantidad_asientos;
+  return Reserva::cantidad_asientos;
 }
-float getPrecioTotal()
+float Reserva::getPrecioTotal()
 {
-  return reserva::precio_total;
+  return Reserva::precio_total;
 }
-QDateTime getFechaReserva()
+QDateTime Reserva::getFechaReserva()
 {
-  return reserva::fecha_reserva;
+  return Reserva::fecha_reserva;
 }
 
 //---------------------------------------------------
 //setters
 //---------------------------------------------------
-void setCodigo(QString codigo)
+void Reserva::setCodigo(QString codigo)
 {
-  reserva::codigo=codigo;
+  Reserva::codigo=codigo;
 }
-void setCodigoVuelo(QString codigo_vuelo)
+void Reserva::setCodigoVuelo(QString codigo_vuelo)
 {
-  reserva::codigo_vuelo=codigo_vuelo;
+  Reserva::codigo_vuelo=codigo_vuelo;
 }
-void setCodigoVendedor(QString codigo_vendedor)
+void Reserva::setCodigoVendedor(QString codigo_vendedor)
 {
-  reserva::codigo_vendedor=codigo_vendedor;
+  Reserva::codigo_vendedor=codigo_vendedor;
 }
-void setCantidadAsientos(int cantidad_asientos)
+void Reserva::setCantidadAsientos(int cantidad_asientos)
 {
-  reserva::cantidad_asientos=cantidad_asientos;
+  Reserva::cantidad_asientos=cantidad_asientos;
 }
-void setDniCliente(QString dni_cliente)
+void Reserva::setDniCliente(QString dni_cliente)
 {
-  reserva::dni_cliente=dni_cliente;
+  Reserva::dni_cliente=dni_cliente;
 }
-void setPrecioTotal(float precio_total)
+void Reserva::setPrecioTotal(float precio_total)
 {
-  reserva::precio_total=precio_total;
+  Reserva::precio_total=precio_total;
 }
-void setFechaReserva(QDateTime fecha_reserva)
+void Reserva::setFechaReserva(QDateTime fecha_reserva)
 {
-  reserva::fecha_reserva=fecha_reserva;
+  Reserva::fecha_reserva=fecha_reserva;
 }
+

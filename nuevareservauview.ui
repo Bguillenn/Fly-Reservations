@@ -14,7 +14,11 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(248, 248, 248);</string>
+   <string notr="true">background-color: rgb(248, 248, 248);
+
+QPushButton::disable{
+	background-color: #f8f8f8;
+}</string>
   </property>
   <widget class="QFrame" name="frame">
    <property name="geometry">
@@ -197,6 +201,9 @@ QPushButton:pressed{
    </property>
   </widget>
   <widget class="QPushButton" name="btnSiguiente">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>530</x>
